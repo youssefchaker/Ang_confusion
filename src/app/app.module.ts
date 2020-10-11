@@ -33,7 +33,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {MatSliderModule} from '@angular/material/slider';
 import { HttpClientModule } from '@angular/common/http';
 import { baseURL } from './shared/baseurl';
-import { HttpModule } from '@angular/http';
+import { HttpModule } from '@angular/http'
+import {AuthGuard} from './services/auth.guard'
 import { HighlightDirective } from './directives/highlight.directive';
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { HighlightDirective } from './directives/highlight.directive';
     DishService,
     PromotionService,
     LeaderService,
+    AppModule,
     {provide: 'BaseURL', useValue: baseURL}
   ],
   entryComponents:[

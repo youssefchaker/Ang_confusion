@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { throwError} from 'rxjs';
 import {HttpErrorResponse} from '@angular/common/http';
-@Injectable({
-  providedIn: 'root'
-})
+
 export class ProcessHTTPmsgService {
 
   constructor() { }
@@ -16,6 +14,7 @@ export class ProcessHTTPmsgService {
     } else {
       errMsg = `${error.status} - ${error.statusText || ''} ${error.error}`;
     }
+
     return throwError(errMsg);
   }
 }
